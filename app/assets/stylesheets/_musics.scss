@@ -1,22 +1,38 @@
-* {
+.wrapper {
   box-sizing: border-box;
-}
-
-
-.wrapper{
-  background-color: #BBBBBB;
   height: 100vh;
+  width: 100%;
+  background-color: #BBBBBB;
 
-  .header{
+  .header {
     height: 100px;
+    width: 100%;
     background-color: #222222;
     display: flex;
     align-items: center;
     justify-content: center;
-    &__name{
+    position: fixed;
+    top: 0;
+
+    .header-title{
       color: white;
       font-size: 60px;
       font-family: 'HoeflerText-Black',sans-serif;
-    }
+    } 
   }
+
+  .content {
+    display: flex;
+
+    .side-bar {
+      width: 180px;
+      background-color: red;
+      height: 100vh;
+      overflow: scroll;
+      .main {
+        width: calc(100% - 100px);
+        height: calc(100vh - 100px);
+      }
+   }
+ }
 }
